@@ -11,5 +11,9 @@ console.log(port);
 requestHandler.use(express.json());
 
 requestHandler.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on https://localhost:${port}`);
+});
+
+requestHandler.get('/api/v1/get-template', (req, res) => {
+        res.send('Hello World');
 });
