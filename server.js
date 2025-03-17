@@ -26,9 +26,16 @@ requestHandler.get("/api/v1/noise-data", async (req, res) => {
 // get by id request handler.  
 requestHandler.get("/api/v1/noise-data/:id", async (req, res) => {
     const id = req.params.id;
-    const dbResponse = await db.query(`select * from noise_data where id = ${id};`);
-    console.log(dbResponse);
-    res.send(dbResponse);
-  });
+    try {
+        const dbResponse = await db.query(`select * from noise_data where id = ${id};`);
+        // res.send(dbResponse);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({ message: "Internal Server Error" });
+    }  
+    if (!dbResponse.rows.length) {
+      res.status(404).send({ message: "Not Found" });
+      return;
+    }});
 
   // get 
