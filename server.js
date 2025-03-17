@@ -1,5 +1,6 @@
 // We use express to create our server endpoints and listen for and respond to request from the front end
 import express from 'express';
+import * as db from './db/index.js';
 // We use dot env to access our environment variables
 import "dotenv/config";
 // Create an instance of express
@@ -14,6 +15,20 @@ requestHandler.listen(port, () => {
     console.log(`Server is running on https://localhost:${port}`);
 });
 
-requestHandler.get('/api/v1/get-template', (req, res) => {
-        res.send('Hello World');
-});
+// get all request handler.
+// listed by numbers. or shall i list by population?
+requestHandler.get("/api/v1/noise-data", async (req, res) => {
+    const dbResponse = await db.query("select no, name, tot_pop from noise_data;"); // limit 5
+    console.log(dbResponse);
+    res.send(dbResponse);
+  });
+
+// get by id request handler.  
+requestHandler.get("/api/v1/noise-data/:id", async (req, res) => {
+    const id = req.params.id;
+    const dbResponse = await db.query(`select * from noise_data where id = ${id};`);
+    console.log(dbResponse);
+    res.send(dbResponse);
+  });
+
+  // get 
