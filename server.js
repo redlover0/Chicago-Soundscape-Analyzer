@@ -16,26 +16,33 @@ requestHandler.listen(port, () => {
 });
 
 // get all request handler.
+
+
 // listed by numbers. or shall i list by population?
 requestHandler.get("/api/v1/noise-data", async (req, res) => {
-    const dbResponse = await db.query("select no, name, tot_pop from noise_data;"); // limit 5
-    console.log(dbResponse);
-    res.send(dbResponse);
-  });
-
-// get by id request handler.  
-requestHandler.get("/api/v1/noise-data/:id", async (req, res) => {
-    const id = req.params.id;
     try {
-        const dbResponse = await db.query(`select * from noise_data where id = ${id};`);
-        // res.send(dbResponse);
+        const dbResponse = await db.query("SELECT name, TOT_POP, ROW_NUMBER() OVER (ORDER BY TOT_POP DESC) AS rank FROM noise_data ORDER BY rank;");
+        console.log(dbResponse);
+        res.send(dbResponse);
     } catch (error) {
         console.log(error);
         res.status(500).send({ message: "Internal Server Error" });
-    }  
-    if (!dbResponse.rows.length) {
-      res.status(404).send({ message: "Not Found" });
-      return;
-    }});
+    }
+});
 
-  // get 
+// get by id request handler.  
+requestHandler.get("/api/v1/noise-data/:id", async (req, res) => {
+    const id = [req.params.id]
+    try {
+        const results = await db.query(`select * from noise_data where id = $1 RETURNING *;`, [req.params.id]);
+        res.send(results);
+    } catch (error) {
+        res.status(500).send({ message: "Internal Server Error" });
+    }
+});
+
+// requestHandler.get("/api/v1/noise-data", async (req, res) => {
+//     const dbResponse = await db.query("SELECT name, noiseLUR, TOT_POP, ROW_NUMBER() OVER (ORDER BY TOT_POP DESC) AS rank FROM noise_data ORDER BY rank;");
+//     console.log(dbResponse);
+//     res.send(dbResponse);
+// });
