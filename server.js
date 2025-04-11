@@ -1,64 +1,49 @@
 // We use express to create our server endpoints and listen for and respond to request from the front end
 import express from 'express';
-import * as db from './db/index.js';
 
-// We use dot env to access our environment variables
 import "dotenv/config";
+import {fetchNoiseDataRankedByPopulation, fetchNoiseDataById} from "./db/noiseDataQueries.js";
+
 // Create an instance of express
 const requestHandler = express();
+
 // Storing our port value from the .env file
-const port = process.env.PORT;
+const port = process.env.PORT || 3000; // Default to 3000 if no port is specified
 console.log(port);
-// the middle ware that allows us to parse json data.
+
+// the middleware that allows us to parse json data.
 requestHandler.use(express.json());
 
 requestHandler.listen(port, () => {
-    console.log(`Server is running on https://localhost:${port}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });
 
 // get all request handler.
-
-
-// listed by numbers. or shall i list by population?
-
-// if you dont use it youd lose it.
-
-// find a project youre very intrested in and work on it.
-
-// Request handler.
 requestHandler.get("/api/v1/noise-data", async (req, res) => {
     try {
-      const populationRankedNoiseData = await fetchNoiseDataRankedByPopulation();
-      res.send(populationRankedNoiseData);
+        const populationRankedNoiseData = await fetchNoiseDataRankedByPopulation();
+        res.send(populationRankedNoiseData.rows); // Send rows directly for the response
     } catch (error) {
-      console.log(error);
-      res.status(500).send({ message: "Internal Server Error" });
+        console.error("Error fetching noise data:", error);
+        res.status(500).send({message: "Internal Server Error"});
     }
-  });
-  
-  // Extract the database operation into a separate function
-  async function fetchNoiseDataRankedByPopulation() {
-    return await db.query(
-      "SELECT name, TOT_POP, ROW_NUMBER() OVER (ORDER BY TOT_POP DESC) AS rank " +
-      "FROM noise_data ORDER BY rank;"
-    );
-  }
+});
 
-
-// get by id request handler.  
+// get by id request handler.
 requestHandler.get("/api/v1/noise-data/:id", async (req, res) => {
     try {
         // Execute SQL query to fetch noise data by ID
-        const results = await db.query(`select * from noise_data where id = $1 RETURNING *;`, [req.params.id]);
+        const results = await fetchNoiseDataById(req.params.id);
 
-        // send query to results.
-        res.send(results);
+        if (!results.rows.length) {
+            // If no matching data is found, send a 404 response
+            res.status(404).send({message: "Data not found"});
+        } else {
+            // send all results if found
+            res.send(results.rows); // did say return only the first result as response
+        }
     } catch (error) {
-
-        // Log any errors that occur during the database query
-        console.log(error);
-
-        // Send a 500 Internal Server Error response if an error occurs
-        res.status(500).send({ message: "Internal Server Error" });
+        console.error("Error fetching noise data by ID:", error.message); // Log the error message
+        res.status(500).send({message: "Internal Server Error"});
     }
 });
