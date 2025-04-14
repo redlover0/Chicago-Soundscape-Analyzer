@@ -1,5 +1,4 @@
 import * as db from "./index.js";
-import req from "express/lib/request.js";
 
 
 export function fetchNoiseDataRankedByPopulation() {
