@@ -1,16 +1,15 @@
 import React from 'react'
 import {Button} from "react-bootstrap";
 import TopNavBar from "../componets/TopNavBar";
-import Cards from "../componets/Cards";
+import CityCard from "../componets/CityCard";
+import BasicStatsButton from "../componets/BasicStatsButton";
 
 const home = () => {
   return (
     <div>
         <TopNavBar/>
-        <Button>
-            Bootstrap- Button
-        </Button>
-        <Cards/>
+        <BasicStatsButton/>
+        <CityCard/>
     </div>
   )
 }
