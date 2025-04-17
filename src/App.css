@@ -4,3 +4,25 @@
 .brand{
   color: #2c3e50;
 }
+
+.card-container {
+  flex-shrink: 0;
+  display: flex;
+  border-radius: 9px;
+  background: #D9D9D9;
+}
+
+.font-container {
+  color: #000;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.padding{
+  padding-top: 20px;
+}
+.small{
+  font-size: 12px;
+}
