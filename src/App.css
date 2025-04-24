@@ -26,3 +26,40 @@
 .small{
   font-size: 12px;
 }
+
+.padding-name {
+ padding-left: 24px;
+}
+
+.padding-value {
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.lh-title {
+  line-height: 1.25;
+}
+
+.w1 {
+  width: 1rem;
+}
+
+.navy {
+  color: #001b44;
+}
+
+.bg-lightest-blue {
+  background-color: #cdecff;
+}
+
+.pa4 {
+  padding: 2rem;
+}
+
+.ml3 {
+  margin-left: 1rem;
+}
