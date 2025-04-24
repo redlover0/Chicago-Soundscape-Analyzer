@@ -8,7 +8,7 @@ import {fetchNoiseDataRankedByPopulation, fetchNoiseDataById} from "./db/noiseDa
 const requestHandler = express();
 
 // Storing our port value from the .env file
-const port = process.env.PORT || 3000; // Default to 3000 if no port is specified
+const port = process.env.PORT || 3123; // Default to 3000 if no port is specified
 console.log(port);
 
 // the middleware that allows us to parse json data.
