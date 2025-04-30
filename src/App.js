@@ -13,7 +13,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/community" element={<CommunityDetails/>}/>
-                    <Route path="/contact" element={<Aboutme/>}/>
+                    <Route path="/about" element={<Aboutme/>}/>
                     <Route path="/compareall" element={<CompareAll/>}/>
                 </Routes>
             </Router>
