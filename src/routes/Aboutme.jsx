@@ -1,23 +1,23 @@
 import React from 'react'
 import TopNavBar from "../componets/TopNavBar";
 import Alert from "../componets/alert";
-import pic from "../imgs/IMG_2373.jpeg"
+import pic from "../imgs/Copy of SafeSound_Pitch_FINAL.svg"
+
 
 const Aboutme = () => {
   return (
       <div>
         <TopNavBar/>
           <div className="text-center">
-        <img alt="Company picture at google "  className='p-1 img-fluid' style={{width: '18rem'}} src={pic}/>
-              <p className="">
-                  <i className='fw-bold'>SafeSound's Demo @ Detroit Youth Tank Moblity Summit</i>
+              <p className="p-2">
+                  <i className='fw-bold'>The problem with sound today</i>
               </p>
+        <img alt="Company picture at google "  className='p-1 img-fluid' style={{width: '48rem'}} src={pic}/>
           </div>
         <div className="hero-title"
-             style={{width: '100%', color: 'black', fontWeight: '400', wordWrap: 'break-word'}}> TLDR:
-            goal = build a world where sounds are safer
+             style={{width: '100%', color: 'black', fontWeight: '400', wordWrap: 'break-word'}}> There we established our vision and mission to build a world where people can enjoy concerts without fear of developing noise induced hearing loss.
             <p>
-                (for all concertgoers)
+                We're a team of 3 students who met in Cohort of Google Code Next.
             </p>
             <p className="fw-bold">
                 how =  SafeSound is building hearing protection devices that allows for full control + protection for the concertgoers experience.
