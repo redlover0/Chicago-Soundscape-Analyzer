@@ -7,31 +7,36 @@ const CityCard = () => {
     const navigate = useNavigate();
 
     const handleCommunitySelect = () => {
-        navigate(`/community`);
+        navigate(`/community/`);
     };
 
     const mockData = [
         {
+            no: 1,
             communityName: 'DOUGLAS',
             buttonText: 'Learn More',
             text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
         },
         {
+            no: 2,
             communityName: 'POPS',
             buttonText: 'Learn More',
             text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
         },
         {
+            no: 3,
             communityName: 'OAKLAND',
             buttonText: 'Learn More',
             text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
         },
         {
+            no: 4,
             communityName: 'GRAND BOULEVARD',
             buttonText: 'Learn More',
             text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'
         },
         {
+            no: 5,
             communityName: 'KENWOOD',
             buttonText: 'Learn More',
             text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.'

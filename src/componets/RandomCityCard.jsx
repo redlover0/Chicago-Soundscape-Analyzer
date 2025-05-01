@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 
 const CityCard = () => {
     let navigate = useNavigate();
-    const navigateTocitie = () => {
+    const navigation = () => {
         navigate('/community');
     };
 
@@ -21,7 +21,7 @@ const CityCard = () => {
                             Some quick example text to build on the card title and make up the
                             bulk of the card's content.
                         </Card.Text>
-                        <Button onClick={navigateTocitie} style={{ width: '16rem' }} variant="primary">Go somewhere</Button>
+                        <Button onClick={navigation} style={{ width: '16rem' }} variant="primary">Go somewhere</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -34,7 +34,7 @@ const CityCard = () => {
                             Some quick example text to build on the card title and make up the
                             bulk of the card's content.
                         </Card.Text>
-                        <Button onClick={navigateTocitie} style={{ width: '16rem' }} variant="outline-primary">Go somewhere</Button>
+                        <Button onClick={navigation} style={{ width: '16rem' }} variant="outline-primary">Go somewhere</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -47,7 +47,7 @@ const CityCard = () => {
                             Some quick example text to build on the card title and make up the
                             bulk of the card's content.
                         </Card.Text>
-                        <Button onClick={navigateTocitie} style={{ width: '16rem' }} variant="outline-primary">Go somewhere</Button>
+                        <Button onClick={navigation} style={{ width: '16rem' }} variant="outline-primary">Go somewhere</Button>
                     </Card.Body>
                 </Card>
             </div>
@@ -60,7 +60,7 @@ const CityCard = () => {
                             Some quick example text to build on the card title and make up the
                             bulk of the card's content.
                         </Card.Text>
-                        <Button onClick={navigateTocitie} style={{ width: '16rem' }} variant="outline-primary">Go somewhere</Button>
+                        <Button onClick={navigation} style={{ width: '16rem' }} variant="outline-primary">Go somewhere</Button>
                     </Card.Body>
                 </Card>
             </div>
