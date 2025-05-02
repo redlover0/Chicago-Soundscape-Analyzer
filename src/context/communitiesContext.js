@@ -1,18 +1,15 @@
-import React, { useState, createContext} from 'react';
+import React, {useState, createContext} from 'react';
 
-export const noiseDataContext = createContext();
+export const NoiseDataContext = createContext();
 
-export const communitiesDataContextProvider = (props) => {
-  const [data, setData] = useState({});
-  const [loading, setLoading] = useState(null);
+export const CommunitiesDataContextProvider = (props) => {
+    const [communities] = useState([]);
 
-  const addData = () => {}
-}
+    return (
+        <NoiseDataContext.Provider value={{communities}}>
+            {props.children}
+        </NoiseDataContext.Provider>
+    );
+};
 
-const communitiesContext = () => {
-  return (
-    <div>communitiesContext</div>
-  )
-}
-
-export default communitiesContext
+export default CommunitiesDataContextProvider;

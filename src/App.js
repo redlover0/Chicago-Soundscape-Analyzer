@@ -5,9 +5,12 @@ import Home from './routes/Home';
 import CommunityDetails from './routes/CommunityDetails';
 import Aboutme from "./routes/Aboutme";
 import CompareAll from "./routes/CompareAll";
+import CommunitiesDataContextProvider from "./context/communitiesContext";
 
 function App() {
     return (
+        // allows me to share data accross mulitple componets
+        <CommunitiesDataContextProvider>
         <div className='container'>
             <Router>
                 <Routes>
@@ -18,6 +21,7 @@ function App() {
                 </Routes>
             </Router>
         </div>
+        </CommunitiesDataContextProvider>
     );
 }
 
