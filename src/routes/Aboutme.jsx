@@ -1,7 +1,6 @@
 import React from 'react'
 import TopNavBar from "../componets/TopNavBar";
 import pic from "../imgs/Copy of SafeSound_Pitch_FINAL.svg"
-import pitch from "../imgs/SafeSound_Pitch_FINAL.svg"
 import pic2 from "../imgs/Copy Copy of SafeSound_Pitch_FINAL.svg"
 
 

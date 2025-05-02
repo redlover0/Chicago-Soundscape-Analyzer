@@ -12,6 +12,13 @@
   background: #D9D9D9;
 }
 
+.capitalize-first {
+  text-transform: lowercase;
+}
+.capitalize-first::first-letter {
+  text-transform: uppercase;
+}
+
 .font-container {
   color: #000;
   font-size: 128px;
