@@ -1,5 +1,6 @@
 // We use express to create our server endpoints and listen for and respond to request from the front end
 import express from 'express';
+import cors from 'cors';
 
 import "dotenv/config";
 import {fetchNoiseDataRankedByPopulation, fetchNoiseDataById} from "./db/noiseDataQueries.js";
@@ -10,6 +11,8 @@ const requestHandler = express();
 // Storing our port value from the .env file
 const port = process.env.PORT || 3123; // Default to 3000 if no port is specified
 console.log(port);
+
+requestHandler.use(cors())
 
 // the middleware that allows us to parse json data.
 requestHandler.use(express.json());
@@ -23,6 +26,7 @@ requestHandler.get("/api/v1/noise-data", async (req, res) => {
     try {
         const populationRankedNoiseData = await fetchNoiseDataRankedByPopulation();
         res.send(populationRankedNoiseData.rows); // Send rows directly for the response
+        console.log(populationRankedNoiseData.rows);
     } catch (error) {
         console.error("Error fetching noise data:", error);
         res.status(500).send({message: "Internal Server Error"});
