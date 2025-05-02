@@ -2,6 +2,7 @@ import React from 'react'
 import TopNavBar from "../componets/TopNavBar";
 import pic from "../imgs/Copy of SafeSound_Pitch_FINAL.svg"
 import pic2 from "../imgs/Copy Copy of SafeSound_Pitch_FINAL.svg"
+import teampic from "../imgs/IMG_2373.jpeg"
 
 
 const Aboutme = () => {
@@ -9,6 +10,12 @@ const Aboutme = () => {
         <div>
             <TopNavBar/>
             <div className="text-center">
+                <div className="text-center p-3">
+                    <img alt="Company picture at google "  className='p-1 img-fluid' style={{width: '18rem'}} src={teampic}/>
+                    <p className="">
+                        <i className='fw-bold'>SafeSound's Demo @ Detroit Youth Tank Moblity Summit</i>
+                    </p>
+                </div>
                 <p className="p-2">
                     <i className='fw-bold'>The problem with sound today</i>
                 </p>
