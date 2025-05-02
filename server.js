@@ -26,7 +26,6 @@ requestHandler.get("/api/v1/noise-data", async (req, res) => {
     try {
         const populationRankedNoiseData = await fetchNoiseDataRankedByPopulation();
         res.send(populationRankedNoiseData.rows); // Send rows directly for the response
-        console.log(populationRankedNoiseData.rows);
     } catch (error) {
         console.error("Error fetching noise data:", error);
         res.status(500).send({message: "Internal Server Error"});
