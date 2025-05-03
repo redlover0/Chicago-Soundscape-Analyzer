@@ -11,3 +11,7 @@ export function fetchNoiseDataRankedByPopulation() {
 export const fetchNoiseDataById = (id) => {
   return db.query("SELECT * FROM noise_data WHERE no = $1", [id]);
 };
+
+export const fetchRandomNoiseData = () => {
+  return db.query("SELECT * FROM noise_data ORDER BY random() LIMIT 4");
+}

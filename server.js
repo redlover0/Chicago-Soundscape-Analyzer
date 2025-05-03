@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 
 import "dotenv/config";
-import {fetchNoiseDataRankedByPopulation, fetchNoiseDataById} from "./db/noiseDataQueries.js";
+import {fetchNoiseDataRankedByPopulation, fetchNoiseDataById, fetchRandomNoiseData} from "./db/noiseDataQueries.js";
 
 // Create an instance of express
 const requestHandler = express();
@@ -31,6 +31,16 @@ requestHandler.get("/api/v1/noise-data", async (req, res) => {
         res.status(500).send({message: "Internal Server Error"});
     }
 });
+
+requestHandler.get("/api/v1/noise-data/random/:id", async (req, res) => {
+    try{
+        const randomNoiseData = await fetchRandomNoiseData();
+        res.send(randomNoiseData.rows);
+    } catch (e) {
+        console.error(e);
+        res.status(500).send({message: "Internal Server Error, Error fetching random noise data"});
+    }
+})
 
 // get by id request handler.
 requestHandler.get("/api/v1/noise-data/:id", async (req, res) => {
