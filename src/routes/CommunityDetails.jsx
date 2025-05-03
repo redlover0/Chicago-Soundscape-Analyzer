@@ -73,59 +73,61 @@ const CommunityDetails = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            try{
-                const response = await CommunityFinder(`/${id}`)
-                console.log(response)
-            }catch(e) {
+            try {
+                const response = await CommunityFinder.get(`/${id}`);
+                setSelectedCommunity(response.data[0]);
+                console.log("Here's the response you want:", response.data[0]);
+            } catch (e) {
                 console.error("Theres an error fetching single ID:", e)
             }
         };
         fetchData();
-    },[id, setSelectedCommunity]);
+    }, [id, setSelectedCommunity]);
 
-  return (
-      <div>
-          <TopNavBar/>
-          <h1 className=" padding font-container" style={{ textSizeAdjust: 'inherit'}}>DOUGLAS</h1>
-          <Container>
-              <Row className="text-center mx-auto">
-                  <Col className="h-150">
-                      <div
-                          className="h-100 d-flex flex-column align-items-center justify-content-center"
-                      >
-                          <p
-                              style={{
-                                  paddingLeft: "95px",
-                                  fontSize: "24px",
-                                  marginBottom: "-35px"
-                              }}
-                          >
-                              Averaging
-                          </p>
-                          <div className="d-flex align-items-center">
-                              <p style={{fontSize: "150px"}}>57</p>
-                              <p
-                                  style={{
-                                      fontSize: "24px",
-                                      alignSelf: "flex-end",
-                                      marginBottom: "45px"
-                                  }}
-                              >
-                                  dB
-                              </p>
-                          </div>
-                      </div>
-                  </Col>
-                  <Col>
-                      <div style={{width: '400px', height: '400px'}}>
-                          <Doughnut options={options} data={data}/>
-                      </div>                  <
-                     /Col>
-              </Row>
-          </Container>
-          <RandomCityCard/>
-      </div>
-  )
+    return (
+        <div>
+            <TopNavBar/>
+            {selectedCommunity ? (
+                <>
+                    <h1 className="padding font-container"
+                        style={{textSizeAdjust: 'inherit'}}>{selectedCommunity.name}</h1>
+                    <Container>
+                        <Row className="text-center mx-auto">
+                            <Col className="h-150">
+                                <div className="h-100 d-flex flex-column align-items-center justify-content-center">
+                                    <p style={{
+                                        paddingLeft: "95px",
+                                        fontSize: "24px",
+                                        marginBottom: "-35px"
+                                    }}>
+                                        Averaging
+                                    </p>
+                                    <div className="d-flex align-items-center">
+                                        <p style={{fontSize: "150px"}}>{Math.ceil(selectedCommunity.noiselur)}</p>
+                                        <p style={{
+                                            fontSize: "24px",
+                                            alignSelf: "flex-end",
+                                            marginBottom: "45px"
+                                        }}>
+                                            dB
+                                        </p>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col>
+                                <div style={{width: '400px', height: '400px'}}>
+                                    <Doughnut options={options} data={data}/>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                    <RandomCityCard/>
+                </>
+            ) : (
+                <p>Loading...</p>
+            )}
+        </div>
+    )
 }
 
 export default CommunityDetails

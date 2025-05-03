@@ -1,72 +1,61 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {useNavigate} from "react-router-dom";
+import CommunityFinder from "../api/CommunityFinder";
+import * as response from "../routes/CommunityDetails";
+import {NoiseDataContext} from "../context/communitiesContext";
 
-const CityCard = () => {
-    let navigate = useNavigate();
-    const navigation = () => {
-        navigate('/community');
+
+const RandomCityCard = () => {
+    const {setCommunities, communities} = useContext(NoiseDataContext);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await CommunityFinder.get(`/random/1`);
+                setCommunities(response.data);
+                console.log("Here's the response you want:", response.data);
+            } catch (e) {
+                console.error(e);
+            }
+        };
+
+        fetchData();
+    }, [setCommunities]);
+
+    const navigate = useNavigate();
+
+    const handleCommunitySelect = (no) => {
+        if (no) {
+            navigate(`/community/${no}`);
+        } else {
+            console.error("Community number is undefined");
+        }
     };
 
     return (
-        <div className="container-fluid">
-            <p className=" padding-name padding-value " style={{ textSizeAdjust: 'inherit', fontSize: "xx-large"}}> Communitys Near </p>
-        <div className="d-flex flex-row-reverse gap-3 justify-content-between">
-            <div className="card-container">
-                <Card style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Title>New York</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
-                        </Card.Text>
-                        <Button onClick={navigation} style={{ width: '16rem' }} variant="primary">Go somewhere</Button>
-                    </Card.Body>
-                </Card>
+        <div className="p-4 container-fluid">
+            <div className="row">
+                {communities && communities.map((community, index) => (
+                    <div key={index} className="col-md-3 mb-3">
+                        <Card style={{width: '18rem'}}>
+                            <Card.Body>
+                                <Card.Title className="capitalize-first">{community.name}</Card.Title>
+                                <Card.Text>Total Pop: {community.tot_pop} Residence</Card.Text>
+                                <Button
+                                    style={{width: '16rem'}}
+                                    variant="outline-primary"
+                                    onClick={() => handleCommunitySelect(community.no)}
+                                >
+                                    Click to view
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                    </div>
+                ))}
             </div>
-
-            <div className="container-fluid">
-                <Card style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
-                        </Card.Text>
-                        <Button onClick={navigation} style={{ width: '16rem' }} variant="outline-primary">Go somewhere</Button>
-                    </Card.Body>
-                </Card>
-            </div>
-
-            <div className="container-fluid">
-                <Card style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
-                        </Card.Text>
-                        <Button onClick={navigation} style={{ width: '16rem' }} variant="outline-primary">Go somewhere</Button>
-                    </Card.Body>
-                </Card>
-            </div>
-
-            <div className="container-fluid">
-                <Card style={{ width: '18rem' }}>
-                    <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                            Some quick example text to build on the card title and make up the
-                            bulk of the card's content.
-                        </Card.Text>
-                        <Button onClick={navigation} style={{ width: '16rem' }} variant="outline-primary">Go somewhere</Button>
-                    </Card.Body>
-                </Card>
-            </div>
-        </div>
         </div>
     );
 };
 
-export default CityCard;
+export default RandomCityCard;
