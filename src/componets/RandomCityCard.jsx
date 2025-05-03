@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import {useNavigate} from "react-router-dom";
@@ -8,7 +8,9 @@ import {NoiseDataContext} from "../context/communitiesContext";
 
 
 const RandomCityCard = () => {
-    const {setCommunities, communities} = useContext(NoiseDataContext);
+    const {communities, setCommunities} = useContext(NoiseDataContext);
+    const [refresh, setRefresh] = useState(false);
+
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -21,11 +23,12 @@ const RandomCityCard = () => {
         };
 
         fetchData();
-    }, [setCommunities]);
+    }, [setCommunities, refresh]);
 
     const navigate = useNavigate();
 
     const handleCommunitySelect = (no) => {
+        setRefresh(!refresh);
         if (no) {
             navigate(`/community/${no}`);
         } else {
