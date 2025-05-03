@@ -3,7 +3,12 @@ import express from 'express';
 import cors from 'cors';
 
 import "dotenv/config";
-import {fetchNoiseDataRankedByPopulation, fetchNoiseDataById, fetchRandomNoiseData} from "./db/noiseDataQueries.js";
+import {
+    fetchNoiseDataRankedByPopulation,
+    fetchNoiseDataById,
+    fetchRandomNoiseData,
+    fetchAllNoiseData
+} from "./db/noiseDataQueries.js";
 
 // Create an instance of express
 const requestHandler = express();
@@ -20,6 +25,7 @@ requestHandler.use(express.json());
 requestHandler.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
+
 
 // get all request handler.
 requestHandler.get("/api/v1/noise-data", async (req, res) => {
