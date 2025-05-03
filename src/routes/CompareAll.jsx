@@ -1,5 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {NoiseDataContext} from "../context/communitiesContext";
+import {Bar} from 'react-chartjs-2';
+import CommunityFinder from "../api/CommunityFinder";
+import TopNavBar from "../componets/TopNavBar";
 
 import {
   Chart as ChartJS,
@@ -12,8 +15,6 @@ import {
   Tooltip,
   Legend
 } from 'chart.js';
-import {Bar} from 'react-chartjs-2';
-import CommunityFinder from "../api/CommunityFinder";
 
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend);
@@ -139,6 +140,7 @@ const CompareAll = () => {
 
   return (
       <div>
+        <TopNavBar/>
         <p className="text-center">Compare all of data</p>
       <div style={{height: '500px', width: '100%'}}>
         <Bar data={data} options={options}/>

@@ -13,6 +13,24 @@ import CommunityFinder from "../api/CommunityFinder";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+//
+// const CompareAll = () => {
+//     const {setCommunities, communities} = useContext(NoiseDataContext);
+//     useEffect(() => {
+//         const fetchData = async () => {
+//             try {
+//                 const response = await CommunityFinder.get("/");
+//                 setCommunities(response.data);
+//                 console.log("Here's the response you want:", response.data);
+//             } catch (e) {
+//                 console.error(e);
+//             }
+//         };
+//
+//         fetchData();
+//     }, [setCommunities]);
+
+
 export const data = {
     labels: ['White Population', 'Hispanic Population', 'Black Population', 'Asian Population', 'Other Population'],
     datasets: [
