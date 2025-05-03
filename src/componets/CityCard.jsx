@@ -13,11 +13,13 @@ const CityCard = () => {
         const fetchData = async () => {
             try {
                 const response = await CommunityFinder.get("/");
-                setCommunities(response.data);
+                 setCommunities(response.data);
+                 console.log("Here's the response you want:", response.data);
             } catch (e) {
                 console.error(e);
             }
         };
+
         fetchData();
     }, [setCommunities]);
 

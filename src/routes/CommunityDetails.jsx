@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext, useEffect} from 'react'
 import TopNavBar from "../componets/TopNavBar";
 import RandomCityCard from "../componets/RandomCityCard";
 import Row from "react-bootstrap/Row";
@@ -7,6 +7,9 @@ import Container from "react-bootstrap/Container";
 
 import {Chart as ChartJS, ArcElement, Tooltip, Legend} from 'chart.js';
 import {Doughnut} from 'react-chartjs-2';
+import {useParams} from "react-router-dom";
+import {NoiseDataContext} from "../context/communitiesContext";
+import CommunityFinder from "../api/CommunityFinder";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -64,11 +67,26 @@ const options = {
     }
 }
 
-const communityDetails = () => {
+const CommunityDetails = () => {
+    const {id} = useParams();
+    const {selectedCommunity, setSelectedCommunity} = useContext(NoiseDataContext);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try{
+                const response = await CommunityFinder(`/${id}`)
+                console.log(response)
+            }catch(e) {
+                console.error("Theres an error fetching single ID:", e)
+            }
+        };
+        fetchData();
+    },[id, setSelectedCommunity]);
+
   return (
       <div>
           <TopNavBar/>
-          <p className=" padding font-container" style={{ textSizeAdjust: 'inherit'}}>DOUGLAS</p>
+          <h1 className=" padding font-container" style={{ textSizeAdjust: 'inherit'}}>DOUGLAS</h1>
           <Container>
               <Row className="text-center mx-auto">
                   <Col className="h-150">
@@ -110,4 +128,4 @@ const communityDetails = () => {
   )
 }
 
-export default communityDetails
+export default CommunityDetails

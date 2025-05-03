@@ -15,7 +15,7 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={<Home/>}/>
-                    <Route path="/community" element={<CommunityDetails/>}/>
+                    <Route path="/community/:id" element={<CommunityDetails/>}/>
                     <Route path="/about" element={<Aboutme/>}/>
                     <Route path="/compareall" element={<CompareAll/>}/>
                 </Routes>
