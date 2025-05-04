@@ -145,6 +145,7 @@ const CompareAll = () => {
 // reverse mapping
   // index number = to num
   const chartRef = useRef();
+  // create the functional requirements for this function
   const onClick = (e) => {
     if(getElementsAtEvent(chartRef.current, e).length > 0){
       console.log(getElementsAtEvent(chartRef.current, e)[0])
