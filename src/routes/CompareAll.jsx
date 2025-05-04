@@ -1,8 +1,10 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {NoiseDataContext} from "../context/communitiesContext";
-import {Bar} from 'react-chartjs-2';
+import {Bar, getElementsAtEvent} from 'react-chartjs-2';
 import CommunityFinder from "../api/CommunityFinder";
 import TopNavBar from "../componets/TopNavBar";
+import {useRef} from "react";
+
 
 import {
   Chart as ChartJS,
@@ -13,14 +15,17 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 } from 'chart.js';
+import {useNavigate} from "react-router-dom";
 
 // Register Chart.js components
 ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend);
 
 
 const CompareAll = () => {
+  const navigate = useNavigate()
+
   const {setCommunities, communities} = useContext(NoiseDataContext);
   useEffect(() => {
     const fetchData = async () => {
@@ -137,13 +142,34 @@ const CompareAll = () => {
       },
     },
   }
+// reverse mapping
+  // index number = to num
+  const chartRef = useRef();
+  const onClick = (e) => {
+    if(getElementsAtEvent(chartRef.current, e).length > 0){
+      console.log(getElementsAtEvent(chartRef.current, e)[0])
+      const datasetIndexNum = getElementsAtEvent(chartRef.current, e)[0];
+      const dataPoint = getElementsAtEvent(chartRef.current, e)[0].index;
+      // console.log(datasetIndexNum)
+      console.log(dataPoint)
+      // navigate(`/community/${dataPoint}`)
+      const revMapping = communities.map(community => community.no)[dataPoint]
+      navigate(`/community/${revMapping}`)
+    }
+  }
+
 
   return (
       <div>
         <TopNavBar/>
         <p className="text-center">Compare all of data</p>
-      <div style={{height: '500px', width: '100%'}}>
-        <Bar data={data} options={options}/>
+      <div style={{height: '500px', width: '100%', padding: '20px'}}>
+        <Bar
+            data={data}
+            options={options}
+            onClick={onClick}
+            ref = {chartRef}
+        />
       </div>
       </div>
   )

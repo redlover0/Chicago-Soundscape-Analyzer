@@ -13,82 +13,11 @@ import CommunityFinder from "../api/CommunityFinder";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-//
-// const CompareAll = () => {
-//     const {setCommunities, communities} = useContext(NoiseDataContext);
-//     useEffect(() => {
-//         const fetchData = async () => {
-//             try {
-//                 const response = await CommunityFinder.get("/");
-//                 setCommunities(response.data);
-//                 console.log("Here's the response you want:", response.data);
-//             } catch (e) {
-//                 console.error(e);
-//             }
-//         };
-//
-//         fetchData();
-//     }, [setCommunities]);
 
-
-export const data = {
-    labels: ['White Population', 'Hispanic Population', 'Black Population', 'Asian Population', 'Other Population'],
-    datasets: [
-        {
-            label: 'Population Distribution',
-            data: [12, 19, 3, 5, 2],
-            backgroundColor: [
-                '#FF6384',
-                '#36A2EB',
-                '#FFCE56',
-                '#4BC0C0',
-                '#9966FF',
-            ],
-            borderWidth: 2,
-        },
-    ],
-};
-
-const options = {
-    responsive: true,
-    plugins: {
-        legend: {
-            position: 'right',
-            labels: {
-                font: {
-                    size: 14,
-                },
-                color: '#333',
-            },
-        },
-        tooltip: {
-            backgroundColor: 'rgba(0,0,0,0.7)',
-            titleFont: {
-                size: 16,
-            },
-            bodyFont: {
-                size: 14,
-            },
-            footerFont: {
-                size: 12,
-            },
-            padding: 10,
-        },
-        title: {
-            display: true,
-            text: 'Population Distribution by Demographic',
-            font: {
-                size: 18,
-            },
-            color: '#555'
-        }
-    }
-}
 
 const CommunityDetails = () => {
+    const {selectedCommunity, setSelectedCommunity, setCommunities, communities} = useContext(NoiseDataContext);
     const {id} = useParams();
-    const {selectedCommunity, setSelectedCommunity} = useContext(NoiseDataContext);
-
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -101,6 +30,72 @@ const CommunityDetails = () => {
         };
         fetchData();
     }, [id, setSelectedCommunity]);
+
+    if (!selectedCommunity) return <div>Loading...</div>;
+    console.log("This is what you asked for when debugging:", selectedCommunity);
+    const { other_pop = [] } = selectedCommunity || {};
+    const { tot_pop = [] } = selectedCommunity || {};
+    const { black_pop = [] } = selectedCommunity || {};
+    const { hispanic_pop = [] } = selectedCommunity || {};
+    const { white_pop = [] } = selectedCommunity || {};
+    const { asian_pop = [] } = selectedCommunity || {};
+
+    const data = {
+    labels: ['White Population', 'Hispanic Population', 'Black Population', 'Asian Population', 'Other Population'],
+        datasets: [
+            {
+                label: 'Population Distribution',
+                data: [white_pop, hispanic_pop, black_pop, asian_pop, other_pop],
+                backgroundColor: [
+                    '#FF6384',
+                    '#36A2EB',
+                    '#FFCE56',
+                    '#4BC0C0',
+                    '#9966FF',
+                ],
+                borderWidth: 2,
+            },
+        ],
+    };
+
+    const options = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'right',
+                labels: {
+                    font: {
+                        size: 14,
+                    },
+                    color: '#333',
+                },
+            },
+            onClick: (e, chartElemnet)  => {
+                console.log(e);
+            },
+            tooltip: {
+                backgroundColor: 'rgba(0,0,0,0.7)',
+                titleFont: {
+                    size: 16,
+                },
+                bodyFont: {
+                    size: 14,
+                },
+                footerFont: {
+                    size: 12,
+                },
+                padding: 10,
+            },
+            title: {
+                display: true,
+                text: 'Population Distribution by Demographic',
+                font: {
+                    size: 18,
+                },
+                color: '#555'
+            }
+        }
+    }
 
     return (
         <div>
@@ -134,7 +129,7 @@ const CommunityDetails = () => {
                             </Col>
                             <Col>
                                 <div style={{width: '400px', height: '400px'}}>
-                                    <Doughnut options={options} data={data}/>
+                                    <Doughnut options={options} data={data}  />
                                 </div>
                             </Col>
                         </Row>
