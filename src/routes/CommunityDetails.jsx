@@ -10,6 +10,8 @@ import {Doughnut} from 'react-chartjs-2';
 import {useParams} from "react-router-dom";
 import {NoiseDataContext} from "../context/communitiesContext";
 import CommunityFinder from "../api/CommunityFinder";
+import PlayButton from "../componets/PlayButton";
+
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -116,6 +118,7 @@ const CommunityDetails = () => {
                                         Averaging
                                     </p>
                                     <div className="d-flex align-items-center">
+                                        <PlayButton/>
                                         <p style={{fontSize: "150px"}}>{Math.ceil(selectedCommunity.noiselur)}</p>
                                         <p style={{
                                             fontSize: "24px",
