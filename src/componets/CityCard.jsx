@@ -26,10 +26,10 @@ const CityCard = () => {
     const navigate = useNavigate();
 
     const handleCommunitySelect = (no) => {
-        if (no) {
+        try {
             navigate(`/community/${no}`);
-        } else {
-            console.error("Community number is undefined");
+        } catch (e) {
+            console.error("Community number is undefined:", e);
         }
     };
 
@@ -41,7 +41,7 @@ const CityCard = () => {
                         <Card style={{width: '18rem'}}>
                             <Card.Body>
                                 <Card.Title className="capitalize-first">{community.name}</Card.Title>
-                                <Card.Text>Total Pop: {community.tot_pop} Residence</Card.Text>
+                                <Card.Text>Total residence: {community.tot_pop}</Card.Text>
                                 <Button
                                     style={{width: '16rem'}}
                                     variant="outline-primary"

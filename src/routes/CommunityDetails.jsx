@@ -18,14 +18,14 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 const CommunityDetails = () => {
-    const {selectedCommunity, setSelectedCommunity, setCommunities, communities} = useContext(NoiseDataContext);
+    const {selectedCommunity, setSelectedCommunity} = useContext(NoiseDataContext);
     const {id} = useParams();
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await CommunityFinder.get(`/${id}`);
                 setSelectedCommunity(response.data[0]);
-                console.log("Here's the response you want:", response.data[0]);
+                console.log(`Here's the response you want on ${id}:`, response.data[0]);
             } catch (e) {
                 console.error("Theres an error fetching single ID:", e)
             }
@@ -34,11 +34,11 @@ const CommunityDetails = () => {
     }, [id, setSelectedCommunity]);
 
     if (!selectedCommunity) return <div>Loading...</div>;
-    console.log("This is what you asked for when debugging:", selectedCommunity);
+    console.log("debugging:", selectedCommunity);
     const { other_pop = [] } = selectedCommunity || {};
     const { tot_pop = [] } = selectedCommunity || {};
     const { black_pop = [] } = selectedCommunity || {};
-    const { hispanic_pop = [] } = selectedCommunity || {};
+    const { hisp_pop = [] } = selectedCommunity || {};
     const { white_pop = [] } = selectedCommunity || {};
     const { asian_pop = [] } = selectedCommunity || {};
 
@@ -47,7 +47,7 @@ const CommunityDetails = () => {
         datasets: [
             {
                 label: 'Population Distribution',
-                data: [white_pop, hispanic_pop, black_pop, asian_pop, other_pop],
+                data: [white_pop, hisp_pop, black_pop, asian_pop, other_pop],
                 backgroundColor: [
                     '#FF6384',
                     '#36A2EB',
@@ -104,7 +104,7 @@ const CommunityDetails = () => {
             <TopNavBar/>
             {selectedCommunity ? (
                 <>
-                    <h1 className="padding font-container"
+                    <h1 className="padding font-container capitalize-first"
                         style={{textSizeAdjust: 'inherit'}}>{selectedCommunity.name}</h1>
                     <Container>
                         <Row className="text-center mx-auto">
