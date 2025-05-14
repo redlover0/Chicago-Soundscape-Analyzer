@@ -44,6 +44,7 @@ requestHandler.get("/api/v1/noise-data/random/:id", async (req, res) => {
         res.send(randomNoiseData.rows);
     } catch (e) {
         console.error(e);
+        console.error("Error fetching random noise data on route '/api/v1/noise-data/random/:id:' ", e);
         res.status(500).send({message: "Internal Server Error, Error fetching random noise data"});
     }
 })
@@ -65,4 +66,5 @@ requestHandler.get("/api/v1/noise-data/:id", async (req, res) => {
         console.error("Error fetching noise data by ID:", error.message); // Log the error message
         res.status(500).send({message: "Internal Server Error"});
     }
+
 });
