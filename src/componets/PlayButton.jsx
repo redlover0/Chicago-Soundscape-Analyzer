@@ -24,7 +24,7 @@ const PlayButton = () => {
 
     return (
         <div>
-            <button className="bg-transparent border-0"onClick={playSound}>
+            <button className="bg-transparent border-0" onClick={playSound}>
                 {isPaused ? <PlayIcon size={40}/> : <PauseIcon size={40}/>}
             </button>
             {/*<PlayIcon size={40} onClick={() => setAudio(audio + 1) } />*/}
