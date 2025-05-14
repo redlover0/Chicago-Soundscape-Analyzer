@@ -24,6 +24,7 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineEleme
 
 
 const CompareAll = () => {
+  // a variable is like a labeled box that allows you to store data inside of it for the computer to use it later.
   const navigate = useNavigate()
 
   const {setCommunities, communities} = useContext(NoiseDataContext);
@@ -47,6 +48,8 @@ const CompareAll = () => {
       {
         type: 'bar',
         label: 'Population',
+        // imagine you had a box and on the outside of that box it had a list of things a that are in it
+        // this code will read that list and pull out spefically the item you ask for.
         data: communities.map(community => community.tot_pop),
         backgroundColor: 'rgba(54, 162, 235, 0.7)',
         borderColor: 'rgba(54, 162, 235, 1)',

@@ -35,7 +35,7 @@ const CityCard = () => {
 
     return (
         <div className="p-4 container-fluid">
-            <div className="row">
+            <div className="row col-md-12">
                 {communities && communities.map((community, index) => (
                     <div key={index} className="col-md-3 mb-3">
                         <Card style={{width: '18rem'}}>
