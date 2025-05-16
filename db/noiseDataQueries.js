@@ -19,3 +19,9 @@ export const fetchRandomNoiseData = () => {
 export const fetchAllNoiseData = () => {
   return db.query("SELECT * FROM noise_data");
 }
+
+// NOT FUNCTIONAL
+export const searchCommunityName = () => {
+  const searchQuery = `%${name}%`;
+  return db.query("SELECT * FROM noise_data WHERE lower(name) LIKE Lower($1)").toLowerCase().startsWith(searchQuery);
+}
