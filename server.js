@@ -4,8 +4,8 @@ import cors from 'cors';
 
 import "dotenv/config";
 import {
-    fetchNoiseDataRankedByPopulation,
     fetchNoiseDataById,
+    fetchNoiseDataRankedByPopulation,
     fetchRandomNoiseData,
     searchCommunityName
 } from "./db/noiseDataQueries.js";
@@ -29,21 +29,33 @@ requestHandler.listen(port, () => {
 
 // NOT TESTED
 // NOT FUNCTIONAL
-requestHandler.get("api/v1/noise-data/search", async (req, res) => {
+requestHandler.get("/api/v1/noise-data/search", async (req, res) => {
     try {
         const {name} = req.query;
-        if (name.rows === 0) {
-            return res.status(404).json({
-                error: 'no search results  found.'
+        if (!name) {
+            return res.status(400).json({
+                error: "This communityName doesn't exist."
             });
         } else {
-            const searchQuery = `%${name}%`;
-            const results = await searchCommunityName()
-            res.send(results);
-            return res.status(404).json({});
+            const results = await searchCommunityName(name);
+            console.log(results.rows);
+            if (results.rows.length) {
+                return res.status(200).json({
+                    results: results.rows
+                });
+            } else {
+                return res.status(404).json({
+                    error: 'no search results  found.'
+                });
+            }
         }}
     catch(err) {
-    console.error(err);}
+        console.error(err);
+        return res.status(500).json({
+            error: "Internal Server Error",
+
+        })
+    }
 });
 
 
