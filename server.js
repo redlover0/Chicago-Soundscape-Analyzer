@@ -27,8 +27,6 @@ requestHandler.listen(port, () => {
 });
 
 
-// NOT TESTED
-// NOT FUNCTIONAL
 requestHandler.get("/api/v1/noise-data/search", async (req, res) => {
     try {
         const {name} = req.query;

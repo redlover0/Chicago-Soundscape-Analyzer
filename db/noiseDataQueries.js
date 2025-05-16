@@ -20,7 +20,6 @@ export const fetchAllNoiseData = () => {
   return db.query("SELECT * FROM noise_data");
 }
 
-// NOT FUNCTIONAL
 export const searchCommunityName = (name) => {
   const searchQuery = `${name}%`;
   const results = searchQuery.startsWith(searchQuery.toLowerCase());
