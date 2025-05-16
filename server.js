@@ -7,7 +7,7 @@ import {
     fetchNoiseDataRankedByPopulation,
     fetchNoiseDataById,
     fetchRandomNoiseData,
-    fetchAllNoiseData
+    searchCommunityName
 } from "./db/noiseDataQueries.js";
 
 // Create an instance of express
@@ -24,6 +24,26 @@ requestHandler.use(express.json());
 
 requestHandler.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
+});
+
+
+// NOT TESTED
+// NOT FUNCTIONAL
+requestHandler.get("api/v1/noise-data/search", async (req, res) => {
+    try {
+        const {name} = req.query;
+        if (name.rows === 0) {
+            return res.status(404).json({
+                error: 'no search results  found.'
+            });
+        } else {
+            const searchQuery = `%${name}%`;
+            const results = await searchCommunityName()
+            res.send(results);
+            return res.status(404).json({});
+        }}
+    catch(err) {
+    console.error(err);}
 });
 
 
