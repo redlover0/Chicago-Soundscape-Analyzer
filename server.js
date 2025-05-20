@@ -32,7 +32,7 @@ requestHandler.get("/api/v1/noise-data/search", async (req, res) => {
         const {name} = req.query;
         if (!name) {
             return res.status(400).json({
-                error: "This communityName doesn't exist."
+                error: `This communityName doesn't exist: ${name}`
             });
         } else {
             const results = await searchCommunityName(name);
