@@ -23,5 +23,5 @@ export const fetchAllNoiseData = () => {
 export const searchCommunityName = (name) => {
   const searchQuery = `${name}%`;
   const results = searchQuery.startsWith(searchQuery.toLowerCase());
-  return db.query(`SELECT * FROM noise_data WHERE name LIKE $1`, [searchQuery]);
+  return db.query(`SELECT * FROM noise_data WHERE name ILIKE $1`, [searchQuery]);
 }
