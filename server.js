@@ -43,7 +43,7 @@ requestHandler.get("/api/v1/noise-data/search", async (req, res) => {
                 });
             } else {
                 return res.status(404).json({
-                    error: 'no search results  found.'
+                    error: 'no search results found.'
                 });
             }
         }}
@@ -55,6 +55,8 @@ requestHandler.get("/api/v1/noise-data/search", async (req, res) => {
         })
     }
 });
+
+
 
 
 // get all request handler.
