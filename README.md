@@ -34,8 +34,6 @@ xyz
 
 xyz
 
-## Mainfesto
-
 xyz
 
 
