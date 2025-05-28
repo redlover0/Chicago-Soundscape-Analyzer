@@ -1,4 +1,4 @@
-## Chicago Soundscape Analyzer:
+## Smart Audio & Safe Listening in Chicago:
 
 visualizes noise, population, and demographics across 77 Chicago communities
 
