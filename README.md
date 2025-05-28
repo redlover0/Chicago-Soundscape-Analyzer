@@ -15,7 +15,7 @@ This project investigates potential correlations between noise levels and commun
 
 As part of my second term in the Google Code Next Engineering Practicum, our cohort, guided by Coach Asim, embarked on a mission to develop an Interactive Web Application. This initiative was designed to sharpen our **autodidactic learning skills** and master **PERN stack web development**.
 
-### use cases:
+### use case:
 
 *   **Analyze Chicago's Soundscape:** Explore noise levels, population, and demographics in 77 communities.
 *   **Investigate Auditory Enviorment:** Questions Answered:
@@ -26,6 +26,8 @@ As part of my second term in the Google Code Next Engineering Practicum, our coh
   *Preventing 20% of NIHL could yield $123B+ in economic gain.*
 
 ## Product Features
+
+When creating this. I was tasked to only create 2 functional requirements. i finished with 5
 
 this is where i explain its features
 
