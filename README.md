@@ -24,18 +24,17 @@ As part of my second term in the Google Code Next Engineering Practicum, our coh
 
 ## Features
 
-xyz
+this is where i explain its features
 
 ## Instruction Manual
 
+this is where i show you how to run it
+
 ## User Stories
 
-xyz
+this is my business thesis
 
 ## Data-Journey
 
-xyz
-
-xyz
-
+this is all the transfermations of the data & data credits
 
