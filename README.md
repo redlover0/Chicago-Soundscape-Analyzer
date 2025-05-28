@@ -5,7 +5,7 @@ This project investigates potential correlations between noise levels and commun
 
 
 1. [Overview](#Overview)
-1. [Product Features](#Features)
+1. [Product Features](#Product-Features)
 2. [instruction Manual](#instruction-manual)
 1. [Wireframes](#Wireframes)
 1. [User Stories](#User-Stories)
