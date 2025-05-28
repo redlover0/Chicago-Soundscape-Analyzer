@@ -3,7 +3,7 @@ visualizes noise, population, and demographics across 77 Chicago communities
 
 This project investigates potential correlations between noise levels and community characteristics. This PERN stack web app, built for a Google Code Next project, Builds understanding of urban sound and serves as a foundational step towards my personal vision of building for 'Smart Audio & Safe Listening'
 
-[Picture here]
+[Picture here of Problem here]
 
 
 1. [Overview](#Overview)
@@ -30,6 +30,15 @@ As part of my second term in the Google Code Next Engineering Practicum, our coh
 ## Product Features
 
 When creating this. I was tasked to only create 2 functional requirements. i finished with 5
+
+**Required Must-have Stories**
+* [x] Playback - Use audio player to playback file.
+* [x] Transcription - View audio note values in real time.
+* [x] Speed Change - Change speed of audio from .25 to 2 times the original speed.
+* [x] Bandwidth Filter - Filter desired frequencies.
+* [x] Waveform View - View waveform of audio synchronized with playback.
+* [x] A/B Looping - Loop selected section of audio. 
+* [x] Pitch Shift - Shift pitch up or down up to 24 semi-tones 
 
 this is where i explain its features
 
