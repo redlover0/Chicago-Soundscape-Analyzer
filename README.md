@@ -10,3 +10,5 @@ As part of my second term in the Google Code Next Engineering Practicum, our coh
 *   **Investigate Auditory Equity:** Asks:
     *   Are demographics & noise levels correlated in Chicago?
     *   What's a healthy noise level for a community?
+*   **Social Good:** Aims to address Noise-Induced Hearing Loss (NIHL). *Preventing 20% of NIHL could yield $123B+ in economic gain.*
+
