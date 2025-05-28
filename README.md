@@ -5,7 +5,7 @@ This project investigates potential correlations between noise levels and commun
 
 [Picture here of Problem here maybe]
 
-<img src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="200">
+<img src="assets/Copy of SafeSound_Vision.svg" alt="drawing">
 
 
 
