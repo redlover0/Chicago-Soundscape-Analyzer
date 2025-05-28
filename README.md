@@ -1,4 +1,4 @@
-Chicago Soundscape Analyzer:
+## Chicago Soundscape Analyzer:
 
 <div>visualizes noise, population, and demographics across 77 Chicago communities<div>
 
