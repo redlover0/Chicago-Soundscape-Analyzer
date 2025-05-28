@@ -9,7 +9,7 @@ This project investigates potential correlations between noise levels and commun
 2. [instruction Manual](#instruction-manual)
 1. [Wireframes](#Wireframes)
 1. [User Stories](#User-Stories)
-1. [Data Journey](#Data-Journey))
+1. [Data Journey](#Data-Journey)
 
 ## Overview
 
@@ -25,6 +25,8 @@ As part of my second term in the Google Code Next Engineering Practicum, our coh
 ## Features
 
 xyz
+
+## Instruction Manual
 
 ## User Stories
 
