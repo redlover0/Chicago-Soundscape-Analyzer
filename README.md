@@ -4,7 +4,7 @@ visualizes noise, population, and demographics across 77 Chicago communities, Th
 
 ## Project Overview
 
-### As part of my second term in the Google Code Next Engineering Practicum, our cohort, guided by Coach Asim, embarked on a mission to develop an Interactive Web Application. This initiative was designed to sharpen our **autodidactic learning skills** and master **PERN stack web development**.
+As part of my second term in the Google Code Next Engineering Practicum, our cohort, guided by Coach Asim, embarked on a mission to develop an Interactive Web Application. This initiative was designed to sharpen our **autodidactic learning skills** and master **PERN stack web development**.
 
 *   **Analyze Chicago's Soundscape:** Explore noise levels, population, and demographics in 77 communities.
 *   **Investigate Auditory Equity:** Asks:
