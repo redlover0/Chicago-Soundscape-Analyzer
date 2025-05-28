@@ -5,7 +5,7 @@ This project investigates potential correlations between noise levels and commun
 
 
 1. [Overview](#Overview)
-1. [Features](#Features)
+1. [Product Features](#Features)
 2. [instruction Manual](#instruction-manual)
 1. [Wireframes](#Wireframes)
 1. [User Stories](#User-Stories)
@@ -22,7 +22,7 @@ As part of my second term in the Google Code Next Engineering Practicum, our coh
 *   **Social Good:** Aims to address Noise-Induced Hearing Loss (NIHL).
   *Preventing 20% of NIHL could yield $123B+ in economic gain.*
 
-## Features
+## Product Features
 
 this is where i explain its features
 
