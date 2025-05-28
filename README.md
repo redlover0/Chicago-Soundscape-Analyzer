@@ -15,13 +15,13 @@ This project investigates potential correlations between noise levels and commun
 
 As part of my second term in the Google Code Next Engineering Practicum, our cohort, guided by Coach Asim, embarked on a mission to develop an Interactive Web Application. This initiative was designed to sharpen our **autodidactic learning skills** and master **PERN stack web development**.
 
-### use case
+### use cases:
 
 *   **Analyze Chicago's Soundscape:** Explore noise levels, population, and demographics in 77 communities.
-*   **Investigate Auditory Enviorment:** Questions :
-    *   Are demographics & noise levels correlated in Chicago?
+*   **Investigate Auditory Enviorment:** Questions Answered:
+    *   Does demographics & population impact noise levels in Chicago?
     *   Is the noise level in my community healthy?
-    *   What's a healthy noise level for a community?
+    *   What does a Safe Noise Level look & Soundlike in my community?
 *   **Social Good:** Aims to address Noise-Induced Hearing Loss (NIHL).
   *Preventing 20% of NIHL could yield $123B+ in economic gain.*
 
