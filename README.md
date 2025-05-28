@@ -1,24 +1,26 @@
 ## Smart Audio & Safe Listening in Chicago:
 
-visualizes noise, population, and demographics across 77 Chicago communities
+**Visualizes noise, population, and demographics across 77 Chicago communities!**
+This project investigates potential correlations between noise levels and community characteristics. This PERN stack web app, built for a Google Code Next project, Builds understanding of urban sound and serves as a foundational step towards my personal vision of building my start-up **SafeSound**
 
-This project investigates potential correlations between noise levels and community characteristics. This PERN stack web app, built for a Google Code Next project, Builds understanding of urban sound and serves as a foundational step towards my personal vision of building for 'Smart Audio & Safe Listening'
+[Picture here of Problem here maybe]
 
-[Picture here of Problem here]
+<img src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="200">
 
 
-1. [Overview](#Overview)
-1. [Product Features](#Product-Features)
-2. [instruction Manual](#instruction-manual)
-1. [Wireframes](#Wireframes)
-1. [User Stories](#User-Stories)
-1. [Data Journey](#Data-Journey)
+
+> 1. [Overview](#Overview)
+> 1. [Product Features](#Product-Features)
+> 2. [instruction Manual](#instruction-manual)
+> 1. [Wireframes](#Wireframes)
+> 1. [User Stories](#User-Stories)
+>1. [Data Journey](#Data-Journey)
 
 ## Overview  
 
-As part of my second term in the Google Code Next Engineering Practicum, our cohort, guided by Coach Asim, embarked on a mission to develop an Interactive Web Application. This initiative was designed to sharpen our **autodidactic learning skills** and master **PERN stack web development**.
+As part of my second term as a Student Engineer @ Google Code Next in the Engineering Practicum cohort by Coach Asim, we were tasked with developing an Interactive Web Application. This term we focused on building **autodidactic learning skills** and mastering our first stack **PERN stack** for web app development.
 
-### use case:
+### Use case:
 
 *   **Analyze Chicago's Soundscape:** Explore noise levels, population, and demographics in 77 communities.
 *   **Investigate Auditory Enviorment:** Questions Answered:
