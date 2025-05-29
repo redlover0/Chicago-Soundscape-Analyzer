@@ -6,10 +6,6 @@ This project investigates potential correlations between noise levels and commun
 
 <div align="center">
 
-<div>
-<img src="assets/Copy of SafeSound_Vision.svg" alt="License: MIT">
-</div>
-
 ![A screenshot showing Smart Audio & Safe Listening homepage](preview_app.svg)
 
 **Quick Start**
