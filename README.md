@@ -80,7 +80,7 @@ When I got the task, I instantly knew how to design my wireframe. I wanted it to
 
 
 
-[!a preview of wireframe](wireframe.svg)
+![A screenshot showing Smart Audio & Safe Listening homepage](wireframe.svg)
 
 sorry of its kinda convusing, heres vid on how they relate
 
