@@ -37,7 +37,7 @@ This project investigates potential correlations between noise levels and commun
 As part of my second term as a Student Engineer @ Google Code Next in the Engineering Practicum cohort by Coach Asim, we were tasked with developing an Interactive Web Application. This term we focused on building **autodidactic learning skills** and mastering our first stack **PERN stack** for web app development.
 
 ### Use case:
-
+> [!IMPORTANT]
 > *   **Analyze Chicago's Soundscape:** Explore noise levels, population, and demographics in 77 communities.
 > *   **Investigate Auditory Enviorment:** Questions Answered:
     *   Does demographics & population impact noise levels in Chicago?
