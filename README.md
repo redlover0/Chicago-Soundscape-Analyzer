@@ -15,7 +15,7 @@ This project investigates potential correlations between noise levels and commun
 
 <div align="center">
 
-<a><img src="assets/Copy of SafeSound_Vision.svg" alt="Safe Sounds Pitch" style="width: 250px; width="250" height="54" /></a>
+<a> <img src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="500" /></a>
 
 **日本語** | [English](./README_EN.md) | [简体中文](/README-zhHans.md) | [繁体中文](/README-zhHant.md) | [Indonesian](/README-ID.md) | [Türkçe](/README-tr.md) | [한국어](/README-kr.md) | [Français](/README-fr.md) | [Español](/README-es.md) | [Português](./README_pt_BR.md)
 
