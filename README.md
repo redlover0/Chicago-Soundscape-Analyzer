@@ -77,12 +77,13 @@ When I got the task, I instantly knew how to design my wireframe. I wanted it to
 >[!IMPORTANT]
 > no assets/code were taken from figma design code generator.
 > all CSS was either written by me or came from bootstrap!
+> accurately communicating my README.md file
 
 
 
 ![A screenshot showing Smart Audio & Safe Listening homepage](wireframe.svg)
 
-sorry of its kinda convusing, heres vid on how they relate
+
 
 ## User Stories
 
