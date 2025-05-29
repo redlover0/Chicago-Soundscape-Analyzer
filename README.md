@@ -48,9 +48,13 @@ When creating this. I was tasked to only create 2 functional requirements. i fin
 
 >[!IMPORTANT]
 >*  **User** can interact with a UI to choose which **data analysis or visualization** they want to see so they can access the information they need.
->*  **User** must be able to view at least 3 data analyses and 2 different visualizations. 
+>*  **User** must be able to view at least **3 data analyses and 2 different visualizations**. 
 >  * **User** can read an **"About Me"** page to learn about the web app's creator.
 
+> 💡 **Tip:** This is an optional enhancement.
+
+!!! tip "Optional"
+This step is optional and can be skipped if not needed.
 
 
 this is where i explain its features
