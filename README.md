@@ -10,7 +10,7 @@ This project investigates potential correlations between noise levels and commun
 
 **Quick Start**
 
-[Overview](#Overview) | [Product Features](#Product-Features) | [instruction Manual](#instruction-manual) | [Wireframes](#Wireframes) | [User Stories](#User-Stories) | [Data Journey](#Data-Journey)
+[Overview](#Overview) | [Product Features](#Product-Features) | [instruction Manual](#instruction-manual) | [Wireframes](#Wireframes) | [Data Journey](#Data-Journey)
 
 </div>
 
@@ -75,19 +75,11 @@ npm start or npm start dev
 ## Wireframes
 When I got the task, I instantly knew how to design my wireframe. I wanted it to be accessible, easy for anyone to navigate, and simple for everyone to understand. I began sketching, admittedly when I was allowed to going from notebook sketches to figma.
 >[!IMPORTANT]
-> no assets/code were taken from figma design code generator.
-> all CSS was either written by me or came from bootstrap!
-> accurately communicating my README.md file
-
+> * no assets/code were taken from Figma design code generator.
+> * all CSS was either written by me or came from bootstrap!
 
 
 ![A screenshot showing Smart Audio & Safe Listening homepage](wireframe.svg)
-
-
-
-## User Stories
-
-this is my business thesis
 
 ## Data-Journey
 
