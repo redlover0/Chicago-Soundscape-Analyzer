@@ -10,7 +10,7 @@ This project investigates potential correlations between noise levels and commun
 
 **Quick Start**
 
-[Overview](#Overview) | [Product Features](#Product-Features) | [instruction Manual](#instruction-manual) | [Wireframes](#Wireframes) | [Data Journey](#Data-Journey)
+[Overview](#Overview) | [Product Features](#Product-Features) | [instruction Manual](#instruction-manual) | [Wireframes](#Wireframes) | [Data Journey](#Data-Journey) | [Special Thanks](#Special-Thanks)
 
 </div>
 
@@ -83,5 +83,11 @@ When I got the task, I instantly knew how to design my wireframe. I wanted it to
 
 ## Data-Journey
 
-this is all the transfermations of the data & data credits
+I started with a CSV file. Since the data needed to live in a database, I created a PostgreSQL database, then a table, and imported the data directly from the CSV. This allowed me to formulate queries for my necessary GET, POST, and PUT methods. Using Express, I connected the data from the database to the backend, which i then fetched from the frontend, beginning a new process for user visualization
+
+Data Creds:
+
+## Special Thanks
+
+Huge Thanks to Maha, Ali for being rubber duckys to any problems i mayve had implementing functionality, Coach Asim for being an awsome Coach for essentially showing me how to learn SWE 
 
