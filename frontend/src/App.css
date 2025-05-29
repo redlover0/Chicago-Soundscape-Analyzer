@@ -5,6 +5,12 @@
   color: #2c3e50;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-container {
   flex-shrink: 0;
   display: flex;

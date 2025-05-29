@@ -107,7 +107,7 @@ const Home = () => {
             <Alert/>
             <TopNavBar/>
             <div>
-                <p className="p-4 d-flex flex-column justify-content-center align-items-center min-vh-20">
+                <p className="p-4 d-flex flex-column justify-content-center align-items-center min-vh-20 text-center h4 fw-light lh-base text-secondary">
                     Find your community on our interactive map and discover valuable insights about your local sound
                     environment.
                     Start monitoring your community's noise levels today!
