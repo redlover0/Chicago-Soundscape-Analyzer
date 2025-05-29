@@ -47,13 +47,13 @@ Before creating my wireframes. I was tasked to only create 3 functional requirem
 
 >[!IMPORTANT]
 >* [FR- 001] as a **User** i can interact with a UI to choose which community **data analysis or visualization** i want to see so i can access the information i need.
->* as a **User** i must be able to view at least **3 data analyses and 2 different visualizations**. 
->  * as a **User** i can read an **"About Me"** page to learn about the web app's creator.
+>* [FR- 002] as a **User** i must be able to view at least **3 data analyses and 2 different visualizations**. 
+>  * [FR- 003] as a **User** i can read an **"About Me"** page to learn about the web app's creator.
 
 >➕ **Additional** 
-> * As a **user**, I am able **audibly hear how loud specific decibel levels are** in different communities, so that I can better understand and compare the noise pollution impact beyond just seeing numbers on a chart.
-> * As a **User**, I am able to navigate from the **"Compare All" page** to the community I'm most interested in.
-> * As a **User**, I am able to search for my specific community on the home page.
+> * [FR- 004] As a **user**, I am able **audibly hear how loud specific decibel levels are** in different communities, so that I can better understand and compare the noise pollution impact beyond just seeing numbers on a chart.
+> * [FR- 005] As a **User**, I am able to navigate from the **"Compare All" page** to the community I'm most interested in.
+> * [FR- 006] As a **User**, I am able to search for my specific community on the home page.
 
 ## Instruction Manual
 Assuming you've already cloned the repo:
@@ -77,6 +77,12 @@ When I got the task, I instantly knew how to design my wireframe. I wanted it to
 >[!IMPORTANT]
 > no assets/code were taken from figma design code generator.
 > all CSS was either written by me or came from bootstrap!
+
+
+
+[!a preview of wireframe](wireframe.pdf)
+
+sorry of its kinda convusing, heres vid on how they relate
 
 ## User Stories
 
