@@ -7,8 +7,10 @@ This project investigates potential correlations between noise levels and commun
 
 [//]: # (<div align="cen"></div>)
 
+<div>
+<img src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="500">   
+</div>
 
-<img class="center" src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="500">   
 
 
 > 1. [Overview](#Overview)
