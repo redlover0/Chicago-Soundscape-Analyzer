@@ -46,7 +46,7 @@ As part of my second term as a Student Engineer @ Google Code Next in the Engine
 Before creating my wireframes. I was tasked to only create 3 functional requirements. i finished with perosnalized all 3 UI designs bringing my web app to the market 2-3 weeks before due date, leaving time to improve and added complicated logic for me at the time like search functionality logic in the backend. 
 
 >[!IMPORTANT]
->* as a **User** i can interact with a UI to choose which community **data analysis or visualization** i want to see so i can access the information i need.
+>* [FR- 001] as a **User** i can interact with a UI to choose which community **data analysis or visualization** i want to see so i can access the information i need.
 >* as a **User** i must be able to view at least **3 data analyses and 2 different visualizations**. 
 >  * as a **User** i can read an **"About Me"** page to learn about the web app's creator.
 
@@ -72,9 +72,11 @@ npm install
 npm start or npm start dev
 ```
 
-this is where i show you how to run it
-
 ## Wireframes
+When I got the task, I instantly knew how to design my wireframe. I wanted it to be accessible, easy for anyone to navigate, and simple for everyone to understand. I began sketching, admittedly when I was allowed to going from notebook sketches to figma.
+>[!IMPORTANT]
+> no assets/code were taken from figma design code generator.
+> all CSS was either written by me or came from bootstrap!
 
 ## User Stories
 
