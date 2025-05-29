@@ -38,12 +38,12 @@ As part of my second term as a Student Engineer @ Google Code Next in the Engine
 
 ### Use case:
 
-*   **Analyze Chicago's Soundscape:** Explore noise levels, population, and demographics in 77 communities.
-*   **Investigate Auditory Enviorment:** Questions Answered:
+> *   **Analyze Chicago's Soundscape:** Explore noise levels, population, and demographics in 77 communities.
+> *   **Investigate Auditory Enviorment:** Questions Answered:
     *   Does demographics & population impact noise levels in Chicago?
     *   Is the noise level in my community healthy?
     *   What does a Safe Noise Level look & Soundlike in my community?
-*   **Social Good:** Aims to address Noise-Induced Hearing Loss (NIHL).
+> *   **Social Good:** Aims to address Noise-Induced Hearing Loss (NIHL).
   *Preventing 20% of NIHL could yield $123B+ in economic gain.*
 
 ## Product Features
