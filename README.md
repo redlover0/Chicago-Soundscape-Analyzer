@@ -3,10 +3,6 @@
 **Visualizes noise, population, and demographics across 77 Chicago communities!**
 This project investigates potential correlations between noise levels and community characteristics. This PERN stack web app, built for a Google Code Next project, Builds understanding of urban sound and serves as a foundational step towards my personal vision of building my start-up **SafeSound**
 
-[Picture here of Problem here maybe]
-
-[//]: # (<div align="cen"></div>)
-
 
 <div align="center">
 
@@ -48,7 +44,7 @@ As part of my second term as a Student Engineer @ Google Code Next in the Engine
 
 ## Product Features
 
-When creating this. I was tasked to only create 2 functional requirements. i finished with 5
+When creating this. I was tasked to only create 2 functional requirements. i finished with 5 bringing my web app to the market 2-3 weeks before due date, leaving time to improve and add new features
 
 this is where i explain its features
 
