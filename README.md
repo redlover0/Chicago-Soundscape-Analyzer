@@ -6,7 +6,9 @@ This project investigates potential correlations between noise levels and commun
 [Picture here of Problem here maybe]
 
 [//]: # (<div align="cen"></div>)
-<img align="center" src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="500">   
+
+<div align="center" class="center">hellp</div>
+<img src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="500">   
 
 
 > 1. [Overview](#Overview)
