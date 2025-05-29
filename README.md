@@ -1,6 +1,6 @@
-## Smart Audio & Safe Listening in Chicago:
+## Welcome to Smart Audio & Safe Listening in Chicago:
 
-**Visualizes noise, population, and demographics across 77 Chicago communities!**
+** With Smart Audio & Safe Listening you can visualize noise, population, and demographics across 77 Chicago communities!**
 This project investigates potential correlations between noise levels and community characteristics. This PERN stack web app, built for a Google Code Next project, Builds understanding of urban sound and serves as a foundational step towards my personal vision of building my start-up **SafeSound**
 
 
@@ -57,6 +57,21 @@ Before creating my wireframes. I was tasked to only create 3 functional requirem
 > * As a **User**, I am able to search for my specific community on the home page.
 
 ## Instruction Manual
+Assuming you've already cloned the repo:
+
+```sh
+cd frontend
+npm install
+npm run dev
+```
+
+then
+
+```sh
+cd backend
+npm install
+npm run dev
+```
 
 this is where i show you how to run it
 
