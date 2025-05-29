@@ -44,7 +44,7 @@ As part of my second term as a Student Engineer @ Google Code Next in the Engine
 
 ## Product Features
 
-When creating this. I was tasked to only create 2 functional requirements. i finished with 5 bringing my web app to the market 2-3 weeks before due date, leaving time to improve and added complicated logic for me at the time like search functionality logic in the backend
+before creating my wireframes. I was tasked to only create 3 functional requirements. i finished with perosnalized all 3 UI designs bringing my web app to the market 2-3 weeks before due date, leaving time to improve and added complicated logic for me at the time like search functionality logic in the backend. 
 
 >[!IMPORTANT]
 >* as a **User** i can interact with a UI to choose which community **data analysis or visualization** i want to see so i can access the information i need.
@@ -52,8 +52,11 @@ When creating this. I was tasked to only create 2 functional requirements. i fin
 >  * as a **User** i can read an **"About Me"** page to learn about the web app's creator.
 
 > ➕ **Additional** 
-> * As a **user**, I can **audibly hear how loud specific decibel levels are** in different communities, so that I can better understand and compare the noise pollution impact beyond just seeing numbers on a chart.
-> * As a **User**, I can navigate from the **"Compare All" page** to the community I'm most interested in.
+> * As a **user**, I am able **audibly hear how loud specific decibel levels are** in different communities, so that I can better understand and compare the noise pollution impact beyond just seeing numbers on a chart.
+> * As a **User**, I am able to navigate from the **"Compare All" page** to the community I'm most interested in.
+> * As a **User**, I am able to search for my specific community on the home page.
+
+
 
 
 
