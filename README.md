@@ -33,7 +33,7 @@ This project investigates potential correlations between noise levels and commun
 As part of my second term as a Student Engineer @ Google Code Next in the Engineering Practicum cohort by Coach Asim, we were tasked with developing an Interactive Web Application. This term we focused on building **autodidactic learning skills** and mastering our first stack **PERN stack** for web app development.
 
 ### Use case:
-> [!IMPORTANT]
+> [!TIP]
 > *   **Analyze Chicago's Soundscape:** Explore noise levels, population, and demographics in 77 communities.
 > *   **Investigate Auditory Enviorment:** Questions Answered:
     *   Does demographics & population impact noise levels in Chicago?
@@ -46,7 +46,7 @@ As part of my second term as a Student Engineer @ Google Code Next in the Engine
 
 When creating this. I was tasked to only create 2 functional requirements. i finished with 5 bringing my web app to the market 2-3 weeks before due date, leaving time to improve and add new features
 
->[!TIP]
+>[!NOTE]
 > User can interact with a UI to choose which data analysis or visualization they want to see so they can access the information they need.
 > User must be able to view at least 3 data analyses and 2 different visualizations.
 > User can read an "About Me" page to learn about the web app's creator.
