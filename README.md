@@ -51,10 +51,8 @@ When creating this. I was tasked to only create 2 functional requirements. i fin
 >*  **User** must be able to view at least **3 data analyses and 2 different visualizations**. 
 >  * **User** can read an **"About Me"** page to learn about the web app's creator.
 
-> 💡 **Tip:** This is an optional enhancement.
+> ➕**Additional:** This is an optional enhancement.
 
-!!! tip "Optional"
-This step is optional and can be skipped if not needed.
 
 
 this is where i explain its features
