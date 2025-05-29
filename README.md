@@ -20,12 +20,17 @@ This project investigates potential correlations between noise levels and commun
 </div>
 
 
-> 1. [Overview](#Overview)
-> 1. [Product Features](#Product-Features)
-> 2. [instruction Manual](#instruction-manual)
-> 1. [Wireframes](#Wireframes)
-> 1. [User Stories](#User-Stories)
->1. [Data Journey](#Data-Journey)
+[//]: # (> 1. [Overview]&#40;#Overview&#41;)
+
+[//]: # (> 1. [Product Features]&#40;#Product-Features&#41;)
+
+[//]: # (> 2. [instruction Manual]&#40;#instruction-manual&#41;)
+
+[//]: # (> 1. [Wireframes]&#40;#Wireframes&#41;)
+
+[//]: # (> 1. [User Stories]&#40;#User-Stories&#41;)
+
+[//]: # (>1. [Data Journey]&#40;#Data-Journey&#41;)
 
 ## Overview  
 
