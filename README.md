@@ -10,9 +10,12 @@ This project investigates potential correlations between noise levels and commun
 
 <div align="center">
 
-<a> <img src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="500" /></a>
+<a> <img src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="500" />
+</a>
 
-**Quick Start** | [Overview](#Overview) | [Product Features](#Product-Features) | [instruction Manual](#instruction-manual)) | [Wireframes](#Wireframes) | [User Stories](#User-Stories) | [Data Journey](#Data-Journey)
+**Quick Start**
+
+[Overview](#Overview) | [Product Features](#Product-Features) | [instruction Manual](#instruction-manual) | [Wireframes](#Wireframes) | [User Stories](#User-Stories) | [Data Journey](#Data-Journey)
 
 </div>
 
@@ -47,6 +50,8 @@ this is where i explain its features
 ## Instruction Manual
 
 this is where i show you how to run it
+
+## Wireframes
 
 ## User Stories
 
