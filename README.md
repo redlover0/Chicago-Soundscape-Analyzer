@@ -9,6 +9,8 @@ This project investigates potential correlations between noise levels and commun
 <a> <img src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="500" />
 </a>
 
+![A screenshot showing a room in Orange Meets](safesound_Preview.pdf)
+
 **Quick Start**
 
 [Overview](#Overview) | [Product Features](#Product-Features) | [instruction Manual](#instruction-manual) | [Wireframes](#Wireframes) | [User Stories](#User-Stories) | [Data Journey](#Data-Journey)
@@ -62,7 +64,7 @@ Assuming you've already cloned the repo:
 ```sh
 cd frontend
 npm install
-npm run dev
+npm start or npm start dev
 ```
 
 then
@@ -70,7 +72,7 @@ then
 ```sh
 cd backend
 npm install
-npm run dev
+npm start or npm start dev
 ```
 
 this is where i show you how to run it
