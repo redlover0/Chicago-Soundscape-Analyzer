@@ -6,10 +6,7 @@ This project investigates potential correlations between noise levels and commun
 
 <div align="center">
 
-<a> <img src="assets/Copy of SafeSound_Vision.svg" alt="drawing" width="500" />
-</a>
-
-![A screenshot showing a room in Orange Meets](preview_app.svg)
+![A screenshot showing Smart Audio & Safe Listening homepage](preview_app.svg)
 
 **Quick Start**
 
