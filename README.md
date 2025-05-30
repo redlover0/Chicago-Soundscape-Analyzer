@@ -90,6 +90,7 @@ I started with a CSV file. Since the data needed to live in a database, I create
 
 
 Data Creds:
+Huang YK, Mitchell UA, Conroy LM, Jones RM. Community daytime noise pollution and socioeconomic differences in Chicago, IL. PLoS One. 2021 Aug 4;16(8):e0254762. doi: 10.1371/journal.pone.0254762. PMID: 34347815; PMCID: PMC8336802.
 
 ## Special Thanks
 
