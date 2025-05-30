@@ -6,7 +6,8 @@ This project investigates potential correlations between noise levels and commun
 
 <div align="center">
 
-![A screenshot showing Smart Audio & Safe Listening homepage](preview_app.svg)
+![A screenshot showing Smart Audio & Safe Listening homepage]((https://github.com/user-attachments/assets/e75ab61e-a2b0-4db4-b546-70328063d890)
+)
 
 **Quick Start**
 
