@@ -80,7 +80,7 @@ When I got the task, I instantly knew how to design my wireframe. I wanted it to
 > * all CSS was either written by me or came from bootstrap!
 
 
-![A screenshot showing Smart Audio & Safe Listening homepage](wireframe.svg)
+![Wireframe](https://github.com/user-attachments/assets/ab078a32-51b6-4e7d-97a2-32d02398c61e)
 
 ## Data-Journey
 
