@@ -87,7 +87,8 @@ When I got the task, I instantly knew how to design my wireframe. I wanted it to
 
 I started with a CSV file. Since the data needed to live in a database, I created a PostgreSQL database, then a table, and imported the data directly from the CSV. This allowed me to formulate queries for my necessary GET, POST, and PUT methods. Using Express, I connected the data from the database to the backend, which i then fetched from the frontend, beginning a new process for user visualization
 
-![flowchart](https://github.com/user-attachments/assets/99d57166-3540-4399-8085-58da1efbc510)
+![flowiechart](https://github.com/user-attachments/assets/5f10b4dc-6946-4cf5-887b-d1b5a4721204)
+
 
 
 Data Creds:
